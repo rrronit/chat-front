@@ -6,7 +6,8 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 import Loading from "../../Component/Loading";
 import { userContext } from "../../main";
 
-const Verification = ({ email }) => {
+
+const Verification = ({ email }:{email:String}) => {
   const [loader, setLoader] = useState(false);
   const { User, setUser } = useContext(userContext);
   const Navigate = useNavigate();
@@ -24,12 +25,12 @@ const Verification = ({ email }) => {
     OTP: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const { name, value } = e.target;
     setData((data) => ({ ...data, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     if (data.OTP.length < 4) {
       toast.error("Invalid OTP. Please enter a valid OTP.");

@@ -10,7 +10,7 @@ const Logout = () => {
   const handleLogout = async () => {
     await axios.get(`${import.meta.env.VITE_BASE_URL}/user/logout`, {
       withCredentials: true,
-    }).then(data=>{
+    }).then(()=>{
         setUser(null)
         Navigate("/")
     });

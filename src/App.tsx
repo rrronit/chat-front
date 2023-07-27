@@ -11,6 +11,7 @@ import { userContext } from "./main";
 function App() {
   const navigator = useNavigate();
   const [User, setUser] = useState(null);
+  
   const [userEmail, setuserEmail] = useState("")
   const [isDataFetched, setIsDataFetched] = useState(false);
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
         navigator("/chat");
       })
       .catch((err) => {
+        console.log(err)
         setIsDataFetched(true);
       });
   }, []);

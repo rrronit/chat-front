@@ -21,7 +21,7 @@ const Login = () => {
   });
   
 const [loader, setLoader] = useState(false)
-const {User,setUser}=useContext(userContext)
+const {setUser}=useContext(userContext)
   const Navigate = useNavigate();
   const LoginForm = useFormik({
     initialValues: {
