@@ -6,7 +6,7 @@ import { userContext } from "../../main";
 import axios from "axios";
 import { MessageBox } from "react-chat-elements";
 import Logout from "../../Component/Logout";
-import BacktoBottomButton from "../../Component/BacktoBottomButton";
+
 
 const Chat = () => {
   const chatRef = useRef<HTMLInputElement>(null);
@@ -54,7 +54,6 @@ const Chat = () => {
         console.log(err);
       });
   };
-
   const sendMessage = async () => {
     try {
       await Promise.resolve(
@@ -88,20 +87,20 @@ const Chat = () => {
                 <MessageBox
                   id={data._id}
                   focus
-                  titleColor=""
+                  titleColor="black"
                   forwarded={true}
                   replyButton={true}
                   removeButton={true}
                   status="read"
                   notch={true}
-                  retracted={true}
+                  retracted={false}
                   position={User._id === data.senderID ? "right" : "left"}
                   title={User._id === data.senderID ? "YOU" : data.senderName}
                   type="text"
                   text={data.message}
                   date={data.createdAt}
                 />
-                <BacktoBottomButton />
+              
               </div>
             );
           })}

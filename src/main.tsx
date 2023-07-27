@@ -22,7 +22,7 @@ export const userContext = createContext<UserContextType>(UserContextState);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
   
-    <BrowserRouter>
+    <BrowserRouter basename="/chat-front">
       <App />
     </BrowserRouter>
   </React.StrictMode>
