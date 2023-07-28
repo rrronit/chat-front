@@ -87,6 +87,7 @@ const Chat = () => {
                 <MessageBox
                   id={data._id}
                   focus
+                  style={{color:"black"}}
                   titleColor="black"
                   forwarded={false}
                   replyButton={false}
