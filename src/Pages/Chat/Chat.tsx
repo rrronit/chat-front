@@ -88,11 +88,11 @@ const Chat = () => {
                   id={data._id}
                   focus
                   titleColor="black"
-                  forwarded={true}
-                  replyButton={true}
-                  removeButton={true}
+                  forwarded={false}
+                  replyButton={false}
+                  removeButton={false}
                   status="read"
-                  notch={true}
+                  notch={false}
                   retracted={false}
                   position={User._id === data.senderID ? "right" : "left"}
                   title={User._id === data.senderID ? "YOU" : data.senderName}
