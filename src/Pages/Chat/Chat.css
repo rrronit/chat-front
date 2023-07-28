@@ -33,7 +33,7 @@
   overflow-y: scroll;
 }
 
-.chat-container .allMessages{
+.rce-mbox-text-retracted.right {
   color:"black";
 }
 
