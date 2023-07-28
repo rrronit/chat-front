@@ -87,14 +87,14 @@ const Chat = () => {
                 <MessageBox
                   id={data._id}
                   focus
-                  style={{color:"black"}}
+            
                   titleColor="black"
-                  forwarded={false}
-                  replyButton={false}
-                  removeButton={false}
+                  forwarded={true}
+                  replyButton={true}
+                  removeButton={true}
                   status="read"
-                  notch={false}
-                  retracted={false}
+                  notch={true}
+                  retracted={true}
                   position={User._id === data.senderID ? "right" : "left"}
                   title={User._id === data.senderID ? "YOU" : data.senderName}
                   type="text"
