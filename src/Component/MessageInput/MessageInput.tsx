@@ -1,4 +1,5 @@
 import "./MessageInput.css";
+import { Dispatch, SetStateAction } from "react";
 
 const MessageInput = ({message,setMessage,handleMessage}:{message:string,setMessage:Dispatch<SetStateAction<string>>,handleMessage:(e: any) => Promise<void>}) => {
  
