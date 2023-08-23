@@ -5,14 +5,30 @@
   justify-content: center;
   align-items: center;
   background-color: black;
+  overflow: hidden;
+}
+.chat-container{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .allMessages {
-  position: absolute;
+
   bottom: 80px;
-  height: 80vh;
+  height: 75vh;
   padding: 20px 10px;
-  width: 80vw;
+  margin-bottom: 2rem;
+  width:75%;
+
   overflow-y: scroll;
+}
+
+@media only screen and (max-width:800px) {
+  .allMessages{
+    width: 100%;
+  }
+  
 }
 
 .rce-mbox-text-retracted.right {

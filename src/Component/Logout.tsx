@@ -27,7 +27,7 @@ const Logout = () => {
           padding: "2px 10px",
           position: "absolute",
           zIndex: 4,
-          top: "40px",
+          top: "25px",
           left: "10px",
         }}
       >

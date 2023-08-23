@@ -1,10 +1,10 @@
 import "./MessageInput.css";
 
-const MessageInput = () => {
+const MessageInput = ({message,setMessage,handleMessage}) => {
   return (
     <div className="input-container ">
-      <input placeholder="Type here...." type="text" />
-      <button className="invite-btn" type="submit">
+      <input value={message} onChange={(e)=>setMessage(e.target.value)} placeholder="Type here...." type="text" />
+      <button className="invite-btn" onClick={handleMessage} type="submit">
         send
       </button>
     </div>

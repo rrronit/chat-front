@@ -9,7 +9,7 @@ import Logout from "../../Component/Logout";
 
 const Chat = () => {
   const chatRef = useRef<HTMLInputElement>(null);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("jj");
 
   const [allMessages, setAllMessages] = useState<Object[]>([]);
 
@@ -89,12 +89,12 @@ const Chat = () => {
                   focus
                   
                   titleColor="black"
-                  forwarded={true}
-                  replyButton={true}
-                  removeButton={true}
+                  forwarded={false}
+                  replyButton={false}
+                  removeButton={false}
                   status="read"
                   notch={true}
-                  retracted={true}
+                  retracted={false}
                   position={User._id === data.senderID ? "right" : "left"}
                   title={User._id === data.senderID ? "YOU" : data.senderName}
                   type="text"
@@ -107,7 +107,7 @@ const Chat = () => {
         </div>
         <form className="MessageInput" onSubmit={(e: any) => handleMessage(e)}>
           <div className="messageBox">
-            <MessageInput />
+            <MessageInput message={message} setMessage={setMessage} handleMessage={handleMessage} />
           </div>
         </form>
       </div>
