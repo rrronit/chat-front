@@ -1,19 +1,19 @@
 import socketIO from "socket.io-client";
 import "./Chat.css";
 import { useEffect, useState, useContext, useRef } from "react";
-import { Input } from "react-chat-elements";
+import MessageInput from "../../Component/MessageInput/MessageInput";
 import { userContext } from "../../main";
 import axios from "axios";
 import { MessageBox } from "react-chat-elements";
 import Logout from "../../Component/Logout";
 
-
 const Chat = () => {
   const chatRef = useRef<HTMLInputElement>(null);
-  const socket: any = useRef(null);
   const [message, setMessage] = useState("");
 
   const [allMessages, setAllMessages] = useState<Object[]>([]);
+
+  const socket: any = useRef(null);
 
   useEffect(() => {
     if (User) {
@@ -87,7 +87,7 @@ const Chat = () => {
                 <MessageBox
                   id={data._id}
                   focus
-            
+                  
                   titleColor="black"
                   forwarded={true}
                   replyButton={true}
@@ -101,22 +101,14 @@ const Chat = () => {
                   text={data.message}
                   date={data.createdAt}
                 />
-              
               </div>
             );
           })}
         </div>
         <form className="MessageInput" onSubmit={(e: any) => handleMessage(e)}>
           <div className="messageBox">
-            <Input
-              maxHeight={20}
-              placeholder="Type here..."
-              onChange={(e: any) => setMessage(e.target.value)}
-              value={message}
-            />
+            <MessageInput />
           </div>
-
-          <button type="submit">SEND</button>
         </form>
       </div>
     </div>

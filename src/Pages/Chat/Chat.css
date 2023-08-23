@@ -6,24 +6,6 @@
   align-items: center;
   background-color: black;
 }
-.chat-container {
-  position: relative;
-  overflow: hidden;
-  width: 80vw;
-  height: 90vh;
-  background-color: gray;
-}
-@media (max-width: 1250px) {
-  .chat-container {
-    width: 80vw;
-  }
-}
-@media (max-width: 750px) {
-  .chat-container {
-    width: 80vw;
-  }
-}
-
 .allMessages {
   position: absolute;
   bottom: 80px;
@@ -34,30 +16,5 @@
 }
 
 .rce-mbox-text-retracted.right {
-  color:"black";
-}
-
-.MessageInput {
-  display: flex;
-  justify-content: center;
-
-  justify-content: center;
-  transform: translateY(82vh);
-
-  margin: 0 50px;
-}
-.MessageInput Input {
-  font-size: large;
-}
-.messageBox {
-  width: 1000px;
-}
-
-.MessageInput button {
-  padding: 0px 50px;
-  background-color: black;
-  color: white;
-  margin-left: 20px;
-  margin-bottom: 50px;
-  height: 40px;
+color:none !important
 }
