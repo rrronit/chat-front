@@ -39,21 +39,25 @@ function App() {
     <>
       <userContext.Provider value={{ User, setUser }}>
         <Routes>
-          <Route
-            path="/"
-            element={<Navigate replace to={User ? "/chat" : "/login"} />}
-          />
-          <Route
-            path="/signup"
-            element={User ? <Chat /> : <Signup setEmail={setuserEmail} />}
-          />
-          <Route path="/login" element={User ? <Chat /> : <Login />} />
-          <Route
-            path="/verify"
-            element={User ? <Chat /> : <Verification email={userEmail} />}
-          />
-          <Route path="/chat" element={User ? <Chat /> : <Login />} />
-          <Route path="*" element={<Navigate to="/login" />} />
+          {User ? (
+            <Route path="*" element={<Chat />} />
+          ) : (
+            <>
+              <Route path="/" element={<Login />} />
+
+              <Route
+                path="/signup"
+                element={<Signup setEmail={setuserEmail} />}
+              />
+              <Route path="/login" element={<Login />} />
+              <Route
+                path="/verify"
+                element={<Verification email={userEmail} />}
+              />
+              <Route path="/chat" element={<Chat />} />
+              <Route path="*" element={<Login />} />
+            </>
+          )}
         </Routes>
       </userContext.Provider>
     </>
