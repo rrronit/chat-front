@@ -40,14 +40,14 @@ const {setUser}=useContext(userContext)
       }).then((res) => {
      
         setUser(res.data.user)
-
+       Navigate("/login")
       })
       .catch((err) => {
         console.log(err)
        
         LoginForm.values.password=""
         toast.error("Invalid Email or Password")
-        Navigate("/login")
+       
         
       });
        
