@@ -9,7 +9,7 @@ import Logout from "../../Component/Logout";
 
 const Chat = () => {
   const chatRef = useRef<HTMLInputElement>(null);
-  const [message, setMessage] = useState("jj");
+  const [message, setMessage] = useState("");
 
   const [allMessages, setAllMessages] = useState<Object[]>([]);
 
