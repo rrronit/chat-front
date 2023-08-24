@@ -40,7 +40,7 @@ function App() {
       <userContext.Provider value={{ User, setUser }}>
         <Routes>
           {User ? (
-            <Route path="/*" element={<Chat />} />
+            <Route path="/chat" element={<Chat />} />
           ) : (
             <>
               <Route path="/" element={<Login />} />
@@ -54,8 +54,8 @@ function App() {
                 path="/verify"
                 element={<Verification email={userEmail} />}
               />
-              <Route path="/chat" element={<Chat />} />
-              <Route path="/*" element={<Login />} />
+         
+          
             </>
           )}
         </Routes>
