@@ -40,7 +40,7 @@ const {setUser}=useContext(userContext)
       }).then((res) => {
      
         setUser(res.data.user)
-       Navigate("/login")
+       Navigate("/chat")
       })
       .catch((err) => {
         console.log(err)
